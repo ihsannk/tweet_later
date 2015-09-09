@@ -15,8 +15,11 @@ require 'pathname'
 require 'pg'
 require 'active_record'
 require 'logger'
+
+#twitter
 require 'twitter'
 require 'yaml'
+require 'omniauth-twitter'
 
 require 'sinatra'
 require "sinatra/reloader" if development?

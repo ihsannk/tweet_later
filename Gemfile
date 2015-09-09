@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
+# twitter
 gem 'twitter'
+gem 'omniauth-twitter'
 
 # PostgreSQL driver
 gem 'pg'
