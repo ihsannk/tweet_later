@@ -4,6 +4,9 @@ source 'https://rubygems.org'
 gem 'twitter'
 gem 'omniauth-twitter'
 
+# heroku
+
+
 # PostgreSQL driver
 gem 'pg'
 
