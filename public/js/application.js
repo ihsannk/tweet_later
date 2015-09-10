@@ -3,8 +3,9 @@ $(document).ready(function() {
 	$("#update_tweet").submit(function(event) {
 		event.preventDefault();
 
-		$('#submit-tweet-button').attr("disable", true);
 		$('#submit-tweet-button').val("loading...");
+		$('#submit-tweet-button').attr("disable", true);
+		
 		// $('#ajax-loader').show();
 
 		$.ajax({
