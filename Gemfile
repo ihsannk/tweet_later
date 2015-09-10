@@ -5,7 +5,8 @@ gem 'twitter'
 gem 'omniauth-twitter'
 
 # heroku
-
+gem 'sidekiq'
+gem 'redis'
 
 # PostgreSQL driver
 gem 'pg'
