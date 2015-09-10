@@ -1,16 +1,16 @@
 <div class="container">
 
   <br>
-  <% if session[:username] != nil %>
+  
   	<form id="" action="/login" method="get">
   		<input type="submit" id="" value="login via twitter">
   	</form>
-  <% else %>
+
   	<h1> <%= session[:username] %></h1>
   	<form id="" action="/logout" method="get">
   		<input type="submit" id="" value="logout">
   	</form>
-  <% end %>
+
 <br>
 
   <form id="update_tweet" action="/update_tweet" method="post">
