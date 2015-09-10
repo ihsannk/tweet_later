@@ -38,7 +38,13 @@ Dir[APP_ROOT.join('app', 'helpers', '*.rb')].each { |file| require file }
 # Set up the database and models
 require APP_ROOT.join('config', 'database')
 
-# API_KEYS = YAML::load(File.open('config/secret.yaml'))
+if Sinatra::Base.development?
+  API_KEYS = YAML::load(File.open('config/secret.yaml'))
+else
+  API_KEYS = {}
+  API_KEYS["TWITTER_CONSUMER_KEY"] = ENV["TWITTER_CONSUMER_KEY"]
+  API_KEYS["TWITTER_CONSUMER_SECRET"] = ENV["TWITTER_CONSUMER_SECRET"]
+end
 
 # $twitter = Twitter::REST::Client.new do |config|
 #   config.consumer_key        = API_KEYS["TWITTER_CONSUMER_KEY"]
